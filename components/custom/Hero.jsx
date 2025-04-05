@@ -7,11 +7,15 @@ import { MessagesContext } from './../../context/MessageContext';
 import { UserDetailContext } from '@/context/UserDetailsContext'
 import SignInDialog from './SignInDialog';
 
+
+
+
 function Hero(){
   const[userInput,setUserInput]= useState("");
   const { messages, setMessages}=useContext(MessagesContext);
   const {userDetail, setUserDetail}=useContext(UserDetailContext);
   const [openDialog,setOpenDialog]=useState(false);
+  
 
   const onGenerate=(input)=>{
     if(!userDetail?.name)
@@ -23,6 +27,7 @@ function Hero(){
       role:'user',
       content:input
     })
+    
   }
 
   return (

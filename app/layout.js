@@ -1,6 +1,7 @@
 import { MessagesProvider } from "@/context/MessageContext";
 import "./globals.css";
 import Provider from './provider';
+import ConvexClientProvider from './ConvexClientProvider';
 
 export const metadata = {
   title: "AIDevX",
@@ -9,6 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <ConvexClientProvider>
     <Provider>
     <MessagesProvider>
       <html lang="en" suppressHydrationWarning>
@@ -18,5 +20,6 @@ export default function RootLayout({ children }) {
     </html>
     </MessagesProvider>
     </Provider>
+    </ConvexClientProvider>
   );
 }
