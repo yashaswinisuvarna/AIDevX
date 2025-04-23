@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/sonner";
 
 
 export const metadata = {
-  title: "AIDev",
+  title: "AIDevX",
   description: "AI powered full-stack web builder with Voice, Prompts",
 };
 
